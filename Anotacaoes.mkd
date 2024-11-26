@@ -1,0 +1,19 @@
+# Método construtor
+
+Método especial usado para inicializar um objeto instanciado
+
+~~~python
+def __init__(self, [parâmetros]):
+    código do método construtor
+
+~~~
+
+# 
+
+~~~python
+class MinhaClasse:
+    def __init__(self, parametro1, parametro2):
+        self.atributo1 = parametro1
+        self.atributo2 = parametro2
+
+~~~
