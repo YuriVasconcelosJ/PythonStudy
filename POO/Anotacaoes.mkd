@@ -1,0 +1,37 @@
+# Método construtor
+
+Método especial usado para inicializar um objeto instanciado
+
+~~~python
+def __init__(self, [parâmetros]):
+    código do método construtor
+
+~~~
+
+# 
+
+~~~python
+class MinhaClasse:
+    def __init__(self, parametro1, parametro2):
+        self.atributo1 = parametro1
+        self.atributo2 = parametro2
+
+~~~
+
+
+# Curiosidades
+
+Usando `__slots__`
+Se você definir `__slots__` em uma classe, o `__dict__` não será mais usado, economizando memória ao evitar a criação do dicionário para cada instância.
+
+~~~Python
+class Pessoa:
+    __slots__ = ['nome', 'idade']  # Limita os atributos permitidos
+
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+p = Pessoa("João", 40)
+print(p.__dict__)  # AttributeError: 'Pessoa' object has no attribute '__dict__'
+~~~
