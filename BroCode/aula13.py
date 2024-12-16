@@ -1,10 +1,9 @@
-texto = "Python é fácil de aprender. Python é versátil. Python é poderoso."
-# Seu código aqui
+texto = "Olá mundo Pequeno"
 
-print(texto.rfind("Python"))
+print(texto.upper())
 
-texto = "Escrever código é divertido. Código é desafiador. Código é necessário."
-print(texto.rfind("Código"))
+print(texto.lower())
 
-print(texto.replace(texto[50:56], 'Programa'))
+print(texto.title())
 
+print(texto.rfind("o"))
