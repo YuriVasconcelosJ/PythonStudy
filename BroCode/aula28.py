@@ -13,6 +13,7 @@ print(somar(1, 2, 3, 4))  # Saída: 10
 # Iterando sobre um *args
 
 def imprimir_args(*args):
+    print(type(args))
     for arg in args:
         print(arg)
 
@@ -28,6 +29,7 @@ imprimir_args("Python", "é", "incrível")
 # Esses argumentos são empacotados em um dicionário.
 
 def mostrar_informacoes(**kwargs):
+    print(type(kwargs))
     for chave, valor in kwargs.items():
         print(f"{chave}: {valor}")
 
@@ -49,3 +51,18 @@ exibir_detalhes(1, 2, 3, nome="João", idade=30)
 # Argumentos posicionais: (1, 2, 3)
 # Argumentos nomeados: {'nome': 'João', 'idade': 30}
 
+def display_name(*args):
+    """
+    Função para pegar varíos elementos não nomeados e juntar eles em uma string
+    """
+    name = ""
+    for arg in args:
+        name = name + " " + arg 
+    # Remove todo o espaço inicial e final
+    return name.strip()
+    # Segunda maneira utilizando o método join()
+    return " ".join(args)
+    
+
+name = display_name("Dr.", "Spongebob", "Harold", "Squarepants", "III")
+print(name)

@@ -1,34 +1,36 @@
-# Variables
-
+# Variables - Armazenar conteúdo dentro de uma variavel
 first_name = "Bro"
 food = "Pizza"
 email = "Brocode@fake.com"
 
 print(first_name)
 
+# Exibindo informçãoes báiscas
 print(f"Hello {first_name}")
 print(f"You like {food}")
-print(f"")
+print(f"My email is {email}")
 
-# INTEGERS
+# Inteiros
 quantity = 3
 age = 25
-# Diferente
+
+# Diferente: Uma string representando um número
 age_string = "25"
-print(type(age))
-print(type(age_string))
 
-# FLOAT
+# Verifica o tipo daquela variável 
+print(type(age))    # <class 'int'>
+print(type(age_string)) # <class 'str'>
 
+# Float
 price = 10.99
-print(type(price))
+print(type(price))  # <class 'float'>
 
-# BOOLEAN 
-Condition = True
-Condition = False
-print(type(Condition))
+# Booleano
+condition = True # Camel case não é utilizado em Python
+print(type(condition))
 
-if Condition:
+# Condicional usando booleano
+if condition:
     print('Verdade!')
 else:
     print("Falso!")
